@@ -166,9 +166,8 @@ a:hover {
   margin-top: 0;
 }
 
-/* A small photo near the bottom of the home page. */
+/* A wide photo near the bottom of the home page, as wide as the text column. */
 .photo {
-  max-width: 20rem;
   margin: 3rem 0 0;
 }
 
