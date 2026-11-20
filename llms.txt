@@ -1,0 +1,17 @@
+# Pierre-Yves Pointereau
+
+> Senior software engineer (front-end) and UI architect in Sydney. Design systems, accessibility (WCAG 2.2 AA), web performance and agent-assisted engineering.
+
+I build the foundations product teams ship on: component libraries, accessibility practice, and fast, stable pages. At Humanitix I created and look after the Svelte component library, led the move to Svelte 5, and built automated accessibility testing against WCAG 2.2. Before that I spent seven years as Front End Architect at News Corp Australia, working on the metro news network and its multi-brand design system. Most of my work now runs through coding agents, with a focus on making their output trustworthy: review and QA agents, verification pipelines, and human sign-off where it matters.
+
+## Pages
+
+- [Home](https://pierre.pointereau.fr/): short introduction and selected work
+- [Resume](https://pierre.pointereau.fr/resume/): full resume as a web page
+- [Resume (PDF)](https://pierre.pointereau.fr/resume/pierre-yves-pointereau-resume.pdf): the same resume as a PDF
+
+## Elsewhere
+
+- [LinkedIn](https://www.linkedin.com/in/pypointereau)
+- [GitHub](https://github.com/Yojimb0)
+- [DailyPirate](https://dailypirate.fun): a daily puzzle game built end to end with agents

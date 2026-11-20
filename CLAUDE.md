@@ -8,9 +8,10 @@ Personal home page and resume of Pierre-Yves Pointereau (senior software enginee
 - `resume/index.html` — the resume as a web page; prints cleanly to A4.
 - `resume/pierre-yves-pointereau-resume.pdf` — PDF generated from the resume page (see below).
 - `style.css` — the only stylesheet. Light and dark via `prefers-color-scheme`, plus a print stylesheet.
-- `img/` — images, resized and stripped of location data (currently one photo on the home page).
+- `img/` — images, resized and stripped of location data. The home page photo comes in two widths (744 and 1136px) served with `srcset`.
+- `robots.txt`, `llms.txt` — for crawlers and AI tools. Keep `llms.txt` in step with the home page.
 - `favicon.svg`, `404.html`.
-- `_headers` — security headers for Cloudflare Pages (strict CSP: no scripts, styles from self only, so no inline `style=` attributes).
+- `_headers` — security headers for Cloudflare Pages (strict CSP: no scripts, styles from self only, so no inline `style=` attributes; plus HSTS and COOP).
 - `_redirects` — sends the old site's `/cv/…` URLs to `/resume/`.
 
 ## Principles
