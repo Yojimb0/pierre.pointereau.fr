@@ -33,12 +33,13 @@ kill %1
 
 ## Deploying
 
-- GitHub repo: `Yojimb0/pierre.pointereau.fr` (to be created), branch `main`.
-- Hosting: Cloudflare Pages, connected to the repo. Framework "None", no build command, output directory `/`.
-- Domain: `pierre.pointereau.fr`. The `pointereau.fr` domain is registered at OVH. Add the custom domain in the Pages project first, then point `pierre` at `<project>.pages.dev` with a CNAME (at OVH, or in Cloudflare if the zone's nameservers are already Cloudflare's — check in OVH under Domain names → pointereau.fr → DNS servers). Remove any existing A/CNAME record for `pierre` first.
+Push to `main` and Cloudflare Pages deploys it automatically. Other branches and PRs get preview URLs on `pierre-pointereau-fr.pages.dev`.
 
-## First session to-do
+- GitHub repo: `Yojimb0/pierre.pointereau.fr` (public), branch `main`. Commits use `py.pointereau@gmail.com` (set in the repo's git config), not the work email.
+- Hosting: Cloudflare Pages project `pierre-pointereau-fr` (a Pages project, not a Worker). Framework "None", no build command, output directory `/`.
+- Domain: `pierre.pointereau.fr`, a custom domain on the Pages project. `pointereau.fr` is registered at OVH, but its DNS is on Cloudflare, so the `pierre` CNAME lives in the Cloudflare zone.
+- Email Address Obfuscation is off for the `pointereau.fr` zone. Leave it off: its script is blocked by the CSP, so the email links would break.
 
-1. `git init -b main`, commit, and create the GitHub repo `Yojimb0/pierre.pointereau.fr` (public), then push.
-2. Help set up the Cloudflare Pages project and the custom domain, as above.
-3. Once live, check https://pierre.pointereau.fr, `/resume/`, the PDF link, the old `/cv/cv.html` redirect, and the security headers.
+## After a deploy, check
+
+https://pierre.pointereau.fr, `/resume/`, the PDF link, the old `/cv/cv.html` redirect (301 to `/resume/`), and the security headers (`curl -sI`).
