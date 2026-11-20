@@ -166,9 +166,16 @@ a:hover {
   margin-top: 0;
 }
 
-footer {
-  margin-top: 4rem;
-  padding-top: 1.25rem;
+/* The footer sits after <main>, lined up with the page's text column. */
+.page:has(+ footer) {
+  padding-bottom: 0;
+}
+
+.page + footer {
+  --footer-measure: var(--measure);
+  width: min(100% - 2.5rem, var(--footer-measure) - 2.5rem);
+  margin: 4rem auto 0;
+  padding: 1.25rem 0 4rem;
   border-top: 1px solid var(--rule);
   color: var(--muted);
   font-size: 0.9rem;
@@ -178,6 +185,10 @@ footer {
 
 .resume .page {
   max-width: 44rem;
+}
+
+.resume .page + footer {
+  --footer-measure: 44rem;
 }
 
 .resume-nav {

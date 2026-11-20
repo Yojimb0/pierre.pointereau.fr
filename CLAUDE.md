@@ -26,7 +26,7 @@ Serve the folder (root-relative links need a server), then print the resume page
 
 ```bash
 python3 -m http.server 8765 &
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --generate-pdf-document-outline \
   --print-to-pdf=resume/pierre-yves-pointereau-resume.pdf http://localhost:8765/resume/
 kill %1
 ```
