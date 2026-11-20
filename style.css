@@ -166,6 +166,25 @@ a:hover {
   margin-top: 0;
 }
 
+/* A small photo near the bottom of the home page. */
+.photo {
+  max-width: 20rem;
+  margin: 3rem 0 0;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.photo figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 /* The footer sits after <main>, lined up with the page's text column. */
 .page:has(+ footer) {
   padding-bottom: 0;
