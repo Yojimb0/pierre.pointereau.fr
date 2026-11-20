@@ -1,0 +1,272 @@
+/* pierre.pointereau.fr — one small stylesheet, no JavaScript, no web fonts. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #fbfaf7;
+  --text: #1d1c1a;
+  --muted: #5f5b54;
+  --rule: #e3dfd7;
+  --accent: #0b5c6b;
+  --measure: 38rem;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Charter, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161514;
+    --text: #ecebe7;
+    --muted: #a8a49c;
+    --rule: #34322e;
+    --accent: #7cc7d4;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.0625rem/1.65 var(--sans);
+}
+
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vw, 6rem) 1.25rem 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.4rem);
+  margin: 0 0 0.25rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 3rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.15rem;
+}
+
+p,
+ul {
+  margin: 0 0 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0 0 2.5rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* A list of dated items: year on the left, text on the right. */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+.timeline li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.timeline .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  padding-top: 0.1rem;
+}
+
+.timeline .what strong {
+  font-weight: 600;
+}
+
+.timeline .what span {
+  display: block;
+  color: var(--muted);
+}
+
+@media (max-width: 30rem) {
+  .timeline li {
+    grid-template-columns: 1fr;
+  }
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.links li + li {
+  margin-top: 0;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---- Resume page --------------------------------------------------------------------------- */
+
+.resume .page {
+  max-width: 44rem;
+}
+
+.resume-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact li + li {
+  margin-top: 0;
+}
+
+.role-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+}
+
+.skills li {
+  margin-top: 0.3rem;
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --text: #000;
+    --muted: #444;
+    --rule: #ccc;
+    --accent: #000;
+  }
+
+  @page {
+    size: A4;
+    margin: 16mm 16mm 18mm;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  .page,
+  .resume .page {
+    max-width: none;
+    padding: 0;
+  }
+
+  .resume-nav,
+  footer {
+    display: none;
+  }
+
+  h2 {
+    margin: 1.4em 0 0.6em;
+    break-after: avoid;
+  }
+
+  h3 {
+    margin-top: 1.1em;
+    break-after: avoid;
+  }
+
+  li {
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.tagline.tight {
+  margin-bottom: 0.5rem;
+}

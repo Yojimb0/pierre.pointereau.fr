@@ -1,0 +1,4 @@
+# Old site paths, sent to their new home.
+/cv/cv.html  /resume/  301
+/cv/*        /resume/  301
+/cv          /resume/  301

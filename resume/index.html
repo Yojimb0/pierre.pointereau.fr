@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume — Pierre-Yves Pointereau</title>
+  <meta name="description" content="Resume of Pierre-Yves Pointereau, senior software engineer (front-end) and UI architect in Sydney.">
+  <link rel="canonical" href="https://pierre.pointereau.fr/resume/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="resume">
+  <main class="page">
+    <nav class="resume-nav" aria-label="Resume">
+      <a href="/">&larr; Home</a>
+      <a href="/resume/pierre-yves-pointereau-resume.pdf" download>Download PDF</a>
+    </nav>
+
+    <header>
+      <h1>Pierre-Yves Pointereau</h1>
+      <p class="tagline tight"><strong>Senior Software Engineer, Front-End &middot; UI Architect</strong><br>
+        Design systems &middot; Accessibility &middot; Web performance &middot; Agent-assisted engineering</p>
+      <ul class="contact">
+        <li>Sydney, NSW</li>
+        <li><a href="mailto:py.pointereau@gmail.com">py.pointereau@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/pypointereau">linkedin.com/in/pypointereau</a></li>
+        <li><a href="https://pierre.pointereau.fr">pierre.pointereau.fr</a></li>
+      </ul>
+    </header>
+
+    <h2>Summary</h2>
+    <p>Senior front-end engineer and UI architect with 20 years of experience building large consumer web products, from News Corp Australia&rsquo;s network of around 15 news sites to Humanitix&rsquo;s ticketing and checkout platform. I build the foundations other engineers ship on: component libraries and design systems, accessibility practice and testing, and fast, stable pages. Since 2026 most of my delivery runs through coding agents, and I focus on making their output trustworthy: agent skills for code review and cross-browser QA, and verification pipelines with human sign-off built in. Outside work, I use agents to build and ship full-stack products end to end, including DailyPirate, a live daily puzzle game.</p>
+
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li><strong>Front-end:</strong> TypeScript, JavaScript, Svelte 5 / SvelteKit, Vue.js, React, HTML, CSS (custom properties, cascade layers), Node.js</li>
+      <li><strong>Design systems:</strong> component libraries, design tokens and colour systems, component workbenches / Storybook, multi-brand theming, Figma for icons and visuals, SVG authoring and optimisation</li>
+      <li><strong>Accessibility:</strong> WCAG 2.2 AA, keyboard and screen-reader testing (VoiceOver, JAWS), axe-core, Accessibility Conformance Reports (VPAT)</li>
+      <li><strong>Quality &amp; delivery:</strong> Playwright, Vitest, visual regression testing, CI/CD pipelines (Bitbucket), branching model, branch-deploy dashboards</li>
+      <li><strong>Performance:</strong> Core Web Vitals, layout stability (CLS), image delivery, SpeedCurve monitoring</li>
+      <li><strong>AI-assisted engineering:</strong> LLM coding agents (Cursor), custom agent skills for review and QA, MCP, human-in-the-loop verification, parallel agent tasks in git worktrees, agent-facing documentation</li>
+      <li><strong>Full-stack (personal projects):</strong> Supabase (Postgres, row-level security, SQL functions, auth), Cloudflare Pages, PWA and service workers, Three.js / WebGPU, content security policy</li>
+    </ul>
+
+    <h2>Experience</h2>
+
+    <h3>Humanitix &mdash; Senior Frontend Developer / UI Architect</h3>
+    <p class="role-meta">Aug 2022 &ndash; Present &middot; Sydney &middot; Ticketing platform that directs booking fees to charity</p>
+    <ul>
+      <li>Created and own the shared Svelte component library (~480 components) and its component workbench, used across the buyer-facing apps; largest contributor to both.</li>
+      <li>Led the staged Svelte 4 &rarr; 5 migration of the ticketing, collections and virtual-event apps and the component library, moving every modal onto a shared accessible modal shell and replacing an unmaintained plugin that blocked the upgrade.</li>
+      <li>Moved my delivery to agent-assisted work in 2026 and built the guardrails that make agent output reviewable: agent skills for accessibility- and architecture-focused PR review, and a per-ticket QA agent that tests across Chromium and WebKit on iPhone, dark mode, forced colours, reduced motion and 320px reflow, hands off what only a person can check, and publishes a QA report to the pull request.</li>
+      <li>Built an automated accessibility testing suite: keyboard-only Playwright journeys through checkout, axe scans against WCAG 2.2 AA, and tab-order, heading and landmark snapshots, running in the dev pipeline with daily Slack reporting.</li>
+      <li>Designed a typed pipeline that turns test evidence into an Accessibility Conformance Report (VPAT), with the type system guaranteeing coverage of all 55 WCAG 2.2 A/AA criteria and a human sign-off on every row before publishing.</li>
+      <li>Led accessibility remediation across checkout, event pages, resale and order management (error summaries, focus management, VoiceOver/JAWS/iOS fixes, contrast and non-colour cues), including fixes from an external audit.</li>
+      <li>Rebuilt the ticket-selection and checkout UI, and built the front-end and transactional emails for instalment payment plans and the waitlist and resale experience.</li>
+      <li>Made embeddable checkout widgets reliable on hosts&rsquo; own websites, fixing iframe resizing and scroll behaviour across Safari and iOS and adding website-builder support.</li>
+      <li>Improved the delivery pipeline: visual regression testing of the component workbench on every pull request, branching-model changes, a branch-deploy dashboard, and Slack notifications for pipeline status and reviews.</li>
+    </ul>
+
+    <h3>Startup roles</h3>
+    <p class="role-meta">2021 &ndash; 2022 &middot; Sydney</p>
+    <ul>
+      <li><strong>Upflowy &mdash; UI Architect</strong> (Feb &ndash; Jul 2022): audited the front-end codebase and proposed a design-system approach to improve UI consistency and delivery speed.</li>
+      <li><strong>BoozeBud &mdash; Senior Frontend Engineer</strong> (Jun 2021 &ndash; Feb 2022): React front-end development on an e-commerce platform in a small startup team.</li>
+    </ul>
+
+    <h3>News Corp Australia &mdash; Front End Architect</h3>
+    <p class="role-meta">Jul 2014 &ndash; Jun 2021 &middot; Sydney</p>
+    <ul>
+      <li>Led the front-end architecture and responsive rewrite of the metro and regional news network (~15 sites including the Daily Telegraph, Herald Sun, Courier Mail, AdelaideNow and PerthNow) on a new Node.js rendering engine.</li>
+      <li>Created Tangram, the company&rsquo;s first component library, and evolved it over three generations into a multi-brand design system with Storybook and automated visual regression testing, adopted across ~15 news sites.</li>
+      <li>Led web performance work across the network: eliminated layout shift (CLS 0) on article pages for most mastheads, removed render-blocking scripts, optimised image delivery and set up continuous monitoring with SpeedCurve.</li>
+      <li>Led a team of 5 engineers on the Global Preference Centre, a newsletter and preference dashboard in Vue.js, and on the Masthead Reimagine project.</li>
+      <li>Architected &ldquo;My News&rdquo;, a personalised interest-following experience built in Svelte on AppSync GraphQL APIs, reusing the shared component library.</li>
+      <li>Drove early adoption of Google AMP and PWA prototyping, and designed a shared custom-advertising solution across all sites.</li>
+      <li>Mentored engineers, ran cross-team training, and founded the engineering community programme: front-end catch-ups, hack days, brown-bag sessions and lightning talks.</li>
+    </ul>
+
+    <h3>Earlier experience</h3>
+    <ul>
+      <li><strong>Contract Front-End Developer, Sydney</strong> (2013 &ndash; 2014): ABC (CMS view templating), Bauer Media (Magshop responsive relaunch), Panthacorp (AngularJS application for Australian Associated Press).</li>
+      <li><strong>Mistergooddeal.com, Paris &mdash; Front-End Web Developer</strong> (2009 &ndash; 2013): front-end rebuild and performance optimisation of a large e-commerce site; freelance web design and development alongside.</li>
+      <li><strong>Web developer roles in France</strong> (2005 &ndash; 2009): PHP, web design and business software development.</li>
+    </ul>
+
+    <h2>Projects</h2>
+
+    <h3><a href="https://dailypirate.fun">DailyPirate</a> &mdash; daily puzzle game</h3>
+    <p class="role-meta">Personal project &middot; Oct 2026 &ndash; Present</p>
+    <ul>
+      <li>Designed, built and launched a live daily puzzle game end to end in about two weeks from first commit to public beta, working with Claude as a coding agent: TypeScript, Three.js (WebGPU) and Vite, deployed on Cloudflare Pages as an installable PWA with offline start.</li>
+      <li>Built the backend on Supabase: a Postgres schema with row-level security, an admin tool with secure sign-in for authoring puzzles, and an anonymous analytics pipeline (insert-only events, admin-only SQL summaries) hardened against malformed client data.</li>
+      <li>Shipped nine puzzle mini-games with generator scripts, tuned the in-game economy with a simulation script, and locked the site down with a strict content security policy.</li>
+      <li>Ran beta rounds with testers and turned their feedback into a version 2 design, now in progress on its own branch.</li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+      <li><strong>&Eacute;cole Sup&eacute;rieure d&rsquo;Informatique de Limoges</strong> &mdash; Bac+4, Software Development (2005 &ndash; 2007)</li>
+      <li><strong>IUT de B&eacute;ziers</strong> &mdash; Bac+2, Computing, Networks and Telecommunications (2003 &ndash; 2005)</li>
+    </ul>
+
+    <h2>Languages</h2>
+    <p>French (native) &middot; English (full professional)</p>
+
+    <footer>
+      <p>Updated November 2026.</p>
+    </footer>
+  </main>
+</body>
+</html>
